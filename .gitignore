@@ -1,0 +1,5 @@
+node_modules
+Logs
+dist
+build
+.env*

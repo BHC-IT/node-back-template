@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Module: ./DBModels/calculsDBHelpers | Module: ./DBModels/calculsDBHelpers</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="width: 100px; height: 100px">
+        
+            <a href="https://github.com/BHC-IT/dosismart" rel="noopener noreferrer" target="_blank">
+                <img src="https://zupimages.net/up/20/07/hhfh.png" width="100%" height="100%">
+            </a>
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">Module: ./DBModels/calculsDBHelpers</a></h1>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-./DBModels_calculsDBHelpers.html">./DBModels/calculsDBHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:./DBModels/calculsDBHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-./DBModels_calculsDBHelpers.html#~createCalcul">createCalcul</a></li><li><a href="module-./DBModels_calculsDBHelpers.html#~defaulter">defaulter</a></li><li><a href="module-./DBModels_calculsDBHelpers.html#~defaulterCalcul">defaulterCalcul</a></li><li><a href="module-./DBModels_calculsDBHelpers.html#~getCalculById">getCalculById</a></li><li><a href="module-./DBModels_calculsDBHelpers.html#~getCalculsByIds">getCalculsByIds</a></li></ul></div></li><li><a href="module-./DBModels_userDBHelpers.html">./DBModels/userDBHelpers</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:./DBModels/userDBHelpers_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-./DBModels_userDBHelpers.html#~addCaculInHistory">addCaculInHistory</a></li><li><a href="module-./DBModels_userDBHelpers.html#~checkToken">checkToken</a></li><li><a href="module-./DBModels_userDBHelpers.html#~createUser">createUser</a></li><li><a href="module-./DBModels_userDBHelpers.html#~defaulter">defaulter</a></li><li><a href="module-./DBModels_userDBHelpers.html#~defaulterUser">defaulterUser</a></li><li><a href="module-./DBModels_userDBHelpers.html#~getUserById">getUserById</a></li><li><a href="module-./DBModels_userDBHelpers.html#~updateUserById">updateUserById</a></li></ul></div></li><li><a href="module-helpers_MongoConnection.html">helpers/MongoConnection</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:helpers/MongoConnection_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-helpers_MongoConnection.html#~init">init</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#main">main</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>./DBModels/calculsDBHelpers</h2>
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description"><p>Helpers functions to handle calcul with MongoDB.</p></div>
+            
+
+            
+                
+
+<dt>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id="~createCalcul">
+            
+                <span class="type-signature"><span class="icon green">inner</span> </span>createCalcul<span class="signature">(calculInfo)</span><span class="type-signature"> &rarr; {Promise}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="./DBModels_calculsDBHelpers.js.html">./DBModels/calculsDBHelpers.js</a></code>,
+                <code><a href="./DBModels_calculsDBHelpers.js.html#line71">line 71</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Add a calcul with calculInfo as data into the MongoDB &quot;calculs&quot; collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>calculInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Calcul's parameters.</p>
+                <h6>Properties</h6>
+                
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The executed date of the calcul. See Date.now().</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The parameters of the calcul.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>result</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The result of the calcul.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Promise</span>
+
+
+
+
+
+- <ul>
+<li>Promise object represents the result of inserting. See <a href="https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/">db.collection.insertOne</a>.</li>
+</ul>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>calculDBhelper.createCalcul({ date: Date.now(), params: {wall: 1, rn: 2, activity: 10, thick: 1.5, distance: 10.2}, result: 2.7 }).then(res => {
+	console.log(res);
+}).catch(e => {
+	console.log(e);
+});</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~defaulter">
+            
+                <span class="ty./DBModelsture"><span class="icon gre./DBModelsr</span> </span>defaulter<span class="signature">(input, def)</span><span class="type-signature"> &rarr; {Object}</span>
+                ./DBModels
+            
+            <div class="container-source members">
+                <code><a href="dbModels_calculsDBHelpers.js.html">dbModels/calculsDBHelpers.js</a></code>,
+                <code><a href="dbModels_calculsDBHelpers.js.html#line29">line 29</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Used to add the properties of def into the input JSON object without erasing them.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>JSON object to edit.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>def</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Default properties to add.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+    <div class="param-desc">
+    
+        <p>Will throw an error if the argument is different than a JSON.</p>
+    
+    </div>
+
+
+        
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Object</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~defaulterCalcul">
+            
+                <span class="ty./DBModelsture"><span class="icon gre./DBModelsr</span> </span>defaulterCalcul<span class="signature">(input)</span><span class="type-signature"> &rarr; {Object}</span>
+                ./DBModels
+            
+            <div class="container-source members">
+                <code><a href="dbModels_calculsDBHelpers.js.html">dbModels/calculsDBHelpers.js</a></code>,
+                <code><a href="dbModels_calculsDBHelpers.js.html#line47">line 47</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Used to create a generic formatted JSON object for a calcul.
+Add :</p>
+<pre class="prettyprint"><code>{date: null, params: null, result: null}</code></pre> 
+<p>properties if they are not present in the input and set them to null by default.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>input</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>JSON object to default.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+    <div class="param-desc">
+    
+        <p>Will throw an error if the argument is different than a JSON.</p>
+    
+    </div>
+
+
+        
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Object</span>
+
+
+
+
+
+- <p>With default properties for a calcul : <code>{date:Number, params:Object, result:Number, ...input}</code></p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>let input = {foo:"bar", date: 17688748, result: 1.87};
+console.log(defaulterCalcul(input)); // {foo:"bar", date: 17688748, params: null, result: 1.87};</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCalculById">
+            ./DBModels./DBModels
+                <span class="ty./DBModelsture"><span class="icon green">inner</span> </span>getCalculById<span class="signature">(CalculId)</span><span class="type-signature"> &rarr; {Promise}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="dbModels_calculsDBHelpers.js.html">dbModels/calculsDBHelpers.js</a></code>,
+                <code><a href="dbModels_calculsDBHelpers.js.html#line94">line 94</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Find a calcul in the collection &quot;calculs&quot; matching the ObjectID passed as parameter.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>CalculId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance of ObjectID of MongoDB.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Promise</span>
+
+
+
+
+
+- <p>Promise object represents the result of db.collection.findOne() (MongoDB).</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCalculsByIds">
+            ./DBModels./DBModels
+                <span class="ty./DBModelsture"><span class="icon green">inner</span> </span>getCalculsByIds<span class="signature">(CalculIds)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="dbModels_calculsDBHelpers.js.html">dbModels/calculsDBHelpers.js</a></code>,
+                <code><a href="dbModels_calculsDBHelpers.js.html#line115">line 115</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Find all calculs in the collection &quot;calculs&quot; matching the ObjectID passed as parameter.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>CalculIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Array of instance of ObjectID of MongoDB.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Array.&lt;Object></span>
+
+
+
+
+
+- <p>Array of calcul object.</p>
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="https://zupimages.net/up/20/07/hhfh.png" style="width: 100px; height: 100px">
+    <div class="footer-text">Dosismart BridgeJS Documentation</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jque./DBModelss"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = 'module:dbModels/calculsDBHelpers_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+	"name": "node-backend-template",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"start": "npm run build && node dist/index.js",
+		"dev": "MODE=dev nodemon",
+		"test": "mocha -r ts-node/register test/**/*.ts",
+		"build": "npm run clean && tsc",
+		"clean": "rimraf ./build && rimraf ./dist",
+		"docker": "./scripts/createDocker.sh $npm_package_name:$npm_package_version",
+		"docker:build": "./scripts/createDocker.sh $npm_package_name:$npm_package_version",
+		"docker:start": "./scripts/runDocker.sh $npm_package_name:$npm_package_version",
+		"docker:test": "./scripts/testDocker.sh $npm_package_name-test:$npm_package_version && ./scripts/runTestDocker.sh $npm_package_name-test:$npm_package_version",
+		"doc": "jsdoc --verbose --pedantic -c ./Docs/conf.json . ./README.md"
+	},
+	"keywords": [
+		"template"
+	],
+	"author": "BHC",
+	"license": "ISC",
+	"dependencies": {
+		"@std/esm": "^0.26.0",
+		"@types/express-rate-limit": "^5.1.1",
+		"@types/mongoose-unique-validator": "^1.0.4",
+		"@types/winston": "^2.4.4",
+		"axios": "^0.21.1",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-rate-limit": "^5.2.6",
+		"express-validator": "^6.10.0",
+		"mongoose": "^5.12.4",
+		"mongoose-unique-validator": "^2.0.3",
+		"morgan": "^1.10.0",
+		"request": "^2.88.2",
+		"winston": "^3.3.3"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.16",
+		"@types/cors": "^2.8.10",
+		"@types/mocha": "^8.2.2",
+		"@types/morgan": "^1.9.2",
+		"@types/node": "^14.14.41",
+		"chai": "^4.3.4",
+		"chai-as-promised": "^7.1.1",
+		"concurrently": "^6.0.2",
+		"mocha": "^8.3.2",
+		"nodemon": "^2.0.7",
+		"rimraf": "^3.0.2",
+		"ts-node": "^9.1.1",
+		"typedoc": "^3.6.4",
+		"typescript": "^4.2.4"
+	}
+}

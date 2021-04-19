@@ -18,9 +18,7 @@ import { connect, connected } from './Helpers/MongoConnection';
 const expressApp = express();
 import * as bodyParser from 'body-parser';
 import logger, { LoggerStream } from './Utils/Logger';
-import * as Mail from "./Helpers/Mail";
 import BridgeResponse from './Middlewares/bridgeResponse';
-import { refreshToken } from './Helpers/bhcAPIConnector';
 import { ResponseType } from './Types/responseTypes'
 
 /*
@@ -28,35 +26,13 @@ import { ResponseType } from './Types/responseTypes'
 */
 expressApp.use(cors());
 expressApp.use(bodyParser.urlencoded({ extended: true }));
-expressApp.use(bodyParser.json({
-	verify: function(req : Request, res : Response, buf : Buffer) {
-		var url = req.originalUrl;
-		if (url.startsWith('/extern/stripe/webhook')) {
-			req.rawBody = buf.toString()
-		}
-	}
-}));
+
 expressApp.use(BridgeResponse);
 expressApp.use(morgan("combined", { stream: new LoggerStream() }));
 /*
 * ROUTES CONFIGURATION
 */
-import AdminRouter from "./Routers/Admin/AdminRouter";
-import PhysicsRouter from "./Routers/Physics/PhysicsRouter";
-import ExternRouter from "./Routers/Extern/ExternRouter";
-import CallbackRouter from "./Routers/Callback/CallbackRouter";
 
-import { TokenCheck } from "./Middlewares/AuthCheck";
-import ClientErrorHandler from "./Middlewares/ClientErrorHandler";
-import ErrorHandler from "./Middlewares/ErrorHandler";
-
-expressApp.use("/extern", ExternRouter());
-expressApp.use("/callback", CallbackRouter());
-expressApp.use(TokenCheck);
-expressApp.use("/admin", AdminRouter());
-expressApp.use("/physics", PhysicsRouter());
-expressApp.use(ClientErrorHandler);
-expressApp.use(ErrorHandler);
 
 expressApp.use((req : Request, res : Response) => {
 	res.bridgeResponse(ResponseType.BAD_REQUEST_NOT_FOUND(req.url));
@@ -74,24 +50,12 @@ function mongoConnect() {
 * @async
 * @function main
 */
-async function main() {
+export async function main() {
 	await mongoConnect();
 	logger.info(`ENVIRONMENT : ${process.env.NODE_ENV}`);
 
 	expressApp.listen(process.env.BRIDGE_PORT, async () => {
 		logger.info(`listening on port ${process.env.BRIDGE_PORT}`);
-		await refreshToken();
-	});
-
-	logger.info("=== SMTP connection TEST ===");
-
-	// verify connection configuration
-	await Mail.verify((error : Error | null, success : any) => {
-		if (error) {
-			logger.info(error);
-		} else {
-			logger.info("Success, Server is ready to send emails");
-		}
 	});
 }
 

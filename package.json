@@ -13,7 +13,8 @@
 		"docker:build": "./scripts/createDocker.sh $npm_package_name:$npm_package_version",
 		"docker:start": "./scripts/runDocker.sh $npm_package_name:$npm_package_version",
 		"docker:test": "./scripts/testDocker.sh $npm_package_name-test:$npm_package_version && ./scripts/runTestDocker.sh $npm_package_name-test:$npm_package_version",
-		"doc": "jsdoc --verbose --pedantic -c ./Docs/conf.json . ./README.md"
+		"doc": "typedoc -plugin typedoc-plugin-param-names --excludePrivate --excludeInternal ./src/* --out doc",
+		"doc:internal": "typedoc -plugin typedoc-plugin-param-names --excludeInternal false ./src/* --out internal"
 	},
 	"keywords": [
 		"template"

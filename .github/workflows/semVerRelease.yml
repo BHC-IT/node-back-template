@@ -1,0 +1,39 @@
+name: SemVer release
+
+on:
+  workflow_run:
+    workflows: ["Node.js CI Tests"]
+    branches: [ master ]
+    types:
+      - completed
+
+jobs:
+  release:
+    name: Release
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+            token: ${{ secrets.GH_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install
+        run: npm ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_NAME: bhc-bot
+          GIT_AUTHOR_EMAIL: contact@bhc-it.com
+          GIT_COMMITTER_NAME: bhc-bot
+          GIT_COMMITTER_EMAIL: contact@bhc-it.com
+        run: npx semantic-release

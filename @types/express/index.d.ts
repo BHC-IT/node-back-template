@@ -12,6 +12,6 @@ declare module 'express-serve-static-core' {
 	}
 
 	interface Response {
-		bridgeResponse: TResponder
+		backResponse: TResponder
 	}
 }

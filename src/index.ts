@@ -18,7 +18,7 @@ import { connect, connected } from './Helpers/MongoConnection';
 const expressApp = express();
 import * as bodyParser from 'body-parser';
 import logger, { LoggerStream } from './Utils/Logger';
-import BridgeResponse from './Middlewares/bridgeResponse';
+import { backResponse } from './Middlewares/backResponse';
 import { ResponseType } from './Types/responseTypes'
 
 /*
@@ -27,7 +27,7 @@ import { ResponseType } from './Types/responseTypes'
 expressApp.use(cors());
 expressApp.use(bodyParser.urlencoded({ extended: true }));
 
-expressApp.use(BridgeResponse);
+expressApp.use(backResponse);
 expressApp.use(morgan("combined", { stream: new LoggerStream() }));
 /*
 * ROUTES CONFIGURATION
@@ -35,7 +35,7 @@ expressApp.use(morgan("combined", { stream: new LoggerStream() }));
 
 
 expressApp.use((req : Request, res : Response) => {
-	res.bridgeResponse(ResponseType.BAD_REQUEST_NOT_FOUND(req.url));
+	res.backResponse(ResponseType.BAD_REQUEST_NOT_FOUND(req.url));
 });
 
 function mongoConnect() {
